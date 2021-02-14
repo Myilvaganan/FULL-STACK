@@ -19,4 +19,4 @@ function getRandomNum(){
 
 
 
-console.log(' Project Done By: Myilvaganan S--> myilsmp@gmail.com --> https://github.com/Myilvaganan?tab=repositories');
+console.log(' Project Done By: Myilvaganan S--> myilsmp@gmail.com --> https://github.com/Myilvaganan/FULL-STACK/tree/main/Projects/Color%20Flipper');
