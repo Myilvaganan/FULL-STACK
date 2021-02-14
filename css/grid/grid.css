@@ -1,0 +1,107 @@
+.grid-container{
+    
+    display: grid;
+
+    /* 200 px columns on left and 100px column on right */
+
+     grid-template-columns: 200px 250px;
+
+
+    /* to flexibility, 2fr means twice the size of column and 1fr  */
+
+    grid-template-columns: 2fr 1fr;
+   
+
+   /* repeating columns size 4 times of 100px  */
+    grid-template-columns: repeat(4, 100px);
+
+
+
+    /* the first rows will be in size 200 px and 2nd row will be in 150px */
+
+    grid-template-rows: 200px 150px ;
+
+    /* grid auto row- it will automatically resize the rows to the given values*/
+
+    grid-auto-rows: 250px;
+
+    /* If we give the size of first column as 300px, the other rows are still 250px (as mentioned in grid-auto-row) */
+    grid-template-rows: 300px;
+
+
+    /* to size the rows according to the content */
+    /* It indicates the minimum height of the row will be 150px and maximum height will be auto, to the content display */
+
+
+    grid-auto-rows: minmax(200px,auto);
+    grid-gap: 10px;
+
+
+    grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "sidebar content"
+
+
+}
+
+
+.grid-item-1{
+    grid-area: header;
+}
+
+.grid-item-2{
+    grid-area: sidebar;
+}
+
+.grid-item-3{
+    grid-area: content;
+} 
+
+
+ .grid-item-1{
+    grid-column-start:1;
+    grid-column-end:-1;
+}
+
+.grid-item-1{
+    grid-column: 1/-1;
+}
+
+
+.grid-item-2{
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+
+
+/* Instead using row-start and row-end , we can use span , similarly ro column-start and column-end */
+
+.grid-item-4{
+    grid-row: span 2;
+}
+
+.grid-item-5{
+    grid-row: span 2;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+.box1 {
+  grid-column-start: 1;
+ grid-column-end: 4;
+ grid-row-start: 1;
+  grid-row-end: 3;  
+}
+
+.box2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5; 
+}
