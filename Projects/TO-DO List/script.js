@@ -14,7 +14,13 @@ EVENT LISTENERS
 ===============
 */
 document.addEventListener("DOMContentLoaded", getTodos);
-todoButton.addEventListener("click", addTodoData);
+todoButton.addEventListener("click", ()=>{
+    if(todoInput.value == ""){
+        alert("Type Something and Add Items!");
+    }else{
+        addTodoData(event);
+    }
+});
 
 todoList.addEventListener("click", deleteItemCheck);
 
